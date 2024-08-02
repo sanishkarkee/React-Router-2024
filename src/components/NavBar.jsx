@@ -15,7 +15,7 @@ function NavBar() {
   };
   return (
     <>
-      <nav>
+      <nav className='primary-nav'>
         {/* <Link to='/'>Home</Link>
         <Link to='/about'>About</Link> */}
 
@@ -23,8 +23,13 @@ function NavBar() {
         <NavLink style={navLinkStyles} to='/'>
           Home
         </NavLink>
-        <NavLink style={navLinkStyles} to='about'>
+
+        <NavLink style={navLinkStyles} to='/about'>
           About
+        </NavLink>
+
+        <NavLink style={navLinkStyles} to='/products'>
+          Products
         </NavLink>
       </nav>
     </>
@@ -32,3 +37,11 @@ function NavBar() {
 }
 
 export default NavBar;
+
+/* NOTE:
+
+  <Link> & <NavLink> both are used to create navigational links in a React application. They help manage navigation and routing within a single-page application (SPA).
+  # <Link>: Purpose: Link is used to navigate to different routes in your application without reloading the page.
+  # <NavLink>: Used when you want to highlight the currently active link without reloading the page.
+
+  */

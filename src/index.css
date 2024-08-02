@@ -75,7 +75,7 @@ button:focus-visible {
 
 /* Added for react-router  tutorial on video 4 */
 
-nav {
+.primary-nav {
   background-color: aliceblue;
   padding: 16px 32px;
 }
