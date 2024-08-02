@@ -83,3 +83,13 @@ nav {
 nav a {
   margin-right: 16px;
 }
+
+/*
+nav a.active {
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #41f01e;
+  padding: 5px;
+  border-radius: 15px;
+  color: rgb(6, 6, 53);
+} */
