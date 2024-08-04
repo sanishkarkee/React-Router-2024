@@ -4,10 +4,16 @@ import { Outlet, useSearchParams } from 'react-router-dom';
 function Users() {
   const [searchParams, setSearchParams] = useSearchParams();
   // -----read value----update search parameter
+  //Eg:---electronics---Category=electronics
 
   // Reading search parameters
   //Retrieve the value of 'filter' from the URL
   const showActiveUsers = searchParams.get('filter') === 'active';
+
+  /*working mechanism:
+  1] searchParams.get('filter') le filter paramete ko value get garxa i.e active
+  2] aba 'active' === 'active' compare hunxa,,ab 'true' showActiveUsers ma set hunxa
+    */
 
   return (
     <>
