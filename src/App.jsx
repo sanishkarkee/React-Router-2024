@@ -33,7 +33,7 @@ function App() {
         <Route path='users/:userId' element={<UserDetails />} />
         <Route path='users/admin' element={<Admin />} />
 
-        OR
+        --------OR-------- 
 
         */}
 
