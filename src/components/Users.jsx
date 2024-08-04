@@ -12,7 +12,7 @@ function Users() {
 
   /*working mechanism:
   1] searchParams.get('filter') le filter paramete ko value get garxa i.e active
-  2] aba 'active' === 'active' compare hunxa,,ab 'true' showActiveUsers ma set hunxa
+  2] aba 'active' === 'active' compare hunxa,,ab 'true' showActiveUsers ma set
     */
 
   return (

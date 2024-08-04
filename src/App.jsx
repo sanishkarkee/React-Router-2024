@@ -1,7 +1,7 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
-import About from './components/About';
+// import About from './components/About';
 import NavBar from './components/NavBar';
 import OrderSummary from './components/OrderSummary';
 import NoMatch from './components/NoMatch';
@@ -11,6 +11,8 @@ import NewProducts from './components/NewProducts';
 import Users from './components/Users';
 import UserDetails from './components/UserDetails';
 import Admin from './components/Admin';
+import React from 'react';
+const LazyAbout = React.lazy(() => import('./components/About')); //Lazy Loading
 
 function App() {
   return (
@@ -19,7 +21,17 @@ function App() {
       <Routes>
         {/* 'PATH' ko kura URL ma dekhinxa , 'ELEMENT' ma chai page component pass garinxa*/}
         <Route path='/' element={<Home />} />
-        <Route path='about' element={<About />} />
+
+        {/* Lazy Loading */}
+        <Route
+          path='about'
+          element={
+            <React.Suspense fallback='Loading...'>
+              <LazyAbout />
+            </React.Suspense>
+          }
+        />
+
         <Route path='order-summary' element={<OrderSummary />} />
 
         {/* Nested Routing */}
@@ -33,10 +45,8 @@ function App() {
         <Route path='users/:userId' element={<UserDetails />} />
         <Route path='users/admin' element={<Admin />} />
 
-        --------OR-------- 
-
+        --------OR--------
         */}
-
         {/* Nested routing xa so , parent component(User) ma <outlet/> lekhnu parxa */}
         <Route path='users' element={<Users />}>
           <Route path=':userId' element={<UserDetails />} />
